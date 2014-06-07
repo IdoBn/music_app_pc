@@ -1,4 +1,4 @@
-'use strickt';
+'use strict';
 
 var URL = 'http://music-hasalon-api.herokuapp.com';
 
