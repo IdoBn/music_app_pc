@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="jumbotron col-md-2">
+    <h2>parties</h2>
+    <ul class="scroll list-group"
+        style="height:300px;" >
+      <li class="list-group-item" ng-repeat="party in parties" ng-click="partySelected(party)">{{party}}</li>
+    </ul>
+  </div>
+
+  <span class="col-md-1"></span>
+  <div class="col-md-6">
+    <div class="jumbotron row">
+    </div>  
+    <div class="jumbotron row">
+      <div class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" src="..." alt="...">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">song title</h4>
+          song description
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="col-md-1"></span>
+
+  <div class="col-md-2 jumbotron">
+    <h2>songs</h2>
+    <ul style="height:300px;" 
+        class="list-group scroll">
+      <li class="list-group-item"
+          ng-repeat="song in songs"
+          ng-click="songSelected(song)">{{song}}</li>
+    </ul>
+  </div>
+</div>
