@@ -1,34 +1,33 @@
 <div class="row">
-  <div class="jumbotron col-md-2">
+  <div class="jumbotron col-md-3">
     <h2>parties</h2>
-    <ul class="scroll list-group"
-        style="height:300px;" >
+    <ul class="scroll list-group">
       <li class="list-group-item" ng-repeat="party in parties" ng-click="partySelected(party)">{{party}}</li>
     </ul>
   </div>
 
-  <span class="col-md-1"></span>
   <div class="col-md-6">
-    <div class="jumbotron row">
-    </div>  
-    <div class="jumbotron row">
-      <div class="media">
-        <a class="pull-left" href="#">
-          <img class="media-object" src="..." alt="...">
-        </a>
-        <div class="media-body">
-          <h4 class="media-heading">song title</h4>
-          song description
+    <div class="padding">
+      <div class="padding jumbotron row">
+        Bacon ipsum dolor sit amet ground round fatback tenderloin ham. Pork strip steak meatball beef, shank frankfurter sirloin pork chop boudin chicken pork belly bacon venison drumstick. Frankfurter sirloin biltong, shoulder ham hock short ribs pork loin short loin jowl. Frankfurter biltong chuck meatball 
+      </div>  
+      <div class="jumbotron row">
+        <div class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object" src="images/yeoman.png" alt="">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">song title</h4>
+            song description
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <span class="col-md-1"></span>
 
-  <div class="col-md-2 jumbotron">
+  <div class="col-md-3 jumbotron">
     <h2>songs</h2>
-    <ul style="height:300px;" 
-        class="list-group scroll">
+    <ul class="list-group scroll">
       <li class="list-group-item"
           ng-repeat="song in songs"
           ng-click="songSelected(song)">{{song}}</li>

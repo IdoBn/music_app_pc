@@ -80,4 +80,10 @@ body {
 
 .scroll {
   overflow-y: scroll;
+  height: 400px;
+}
+
+.padding {
+  padding-left: 10px;
+  padding-right: 10px;
 }
