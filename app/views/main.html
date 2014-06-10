@@ -2,7 +2,7 @@
   <div class="jumbotron col-md-3">
     <h2>parties</h2>
     <ul class="scroll list-group">
-      <li class="list-group-item" ng-repeat="party in parties" ng-click="partySelected(party)">{{party}}</li>
+      <li class="list-group-item" ng-repeat="party in parties" ng-click="partySelected(party)">{{party.name}}</li>
     </ul>
   </div>
 
@@ -14,11 +14,14 @@
       <div class="jumbotron row">
         <div class="media">
           <a class="pull-left" href="#">
-            <img class="media-object" src="images/yeoman.png" alt="">
+            <img class="media-object" ng-src="{{song.thumbnail}}" alt="">
           </a>
           <div class="media-body">
-            <h4 class="media-heading">song title</h4>
-            song description
+            <h4 class="media-heading">{{song.title}}</h4>
+            <div ng-if="song" class="caption">
+              <img class="media-object" ng-src="{{song.user.thumbnail}}">
+              <span>by: {{song.user.name}}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -29,8 +32,14 @@
     <h2>songs</h2>
     <ul class="list-group scroll">
       <li class="list-group-item"
-          ng-repeat="song in songs"
-          ng-click="songSelected(song)">{{song}}</li>
+          ng-repeat="song in party.requests"
+          ng-click="songSelected(song)">
+          <a class="pull-left" href="#">
+            <img class="media-object" ng-src="{{song.thumbnail}}" width="80px" height="60px" alt="">
+          </a>
+          <small>{{song.title | limitTo:15 }}</small><br>
+          <small ng-if="song.likes">likes: {{song.likes.length}}</small><br>
+      </li>
     </ul>
   </div>
 </div>

@@ -14,11 +14,12 @@ angular.module('musicPcApp')
 
     $scope.partySelected = function(party) {
       Party.getParty(party.id).success(function(data) {
-        $scope.party = data.party; 
+        $scope.party = data.party;
+        console.log($scope.party);
       });
     };
 
     $scope.songSelected = function(song) {
-      alert(song);
+      $scope.song = song;
     };
   });
