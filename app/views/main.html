@@ -12,15 +12,39 @@
         Bacon ipsum dolor sit amet ground round fatback tenderloin ham. Pork strip steak meatball beef, shank frankfurter sirloin pork chop boudin chicken pork belly bacon venison drumstick. Frankfurter sirloin biltong, shoulder ham hock short ribs pork loin short loin jowl. Frankfurter biltong chuck meatball
       </div>
       <div class="jumbotron row">
-        <div class="media">
-          <a class="pull-left" href="#">
-            <img class="media-object" ng-src="{{song.thumbnail}}" alt="">
-          </a>
-          <div class="media-body">
-            <h4 class="media-heading">{{song.title}}</h4>
-            <div ng-if="song" class="caption">
-              <img class="media-object" ng-src="{{song.user.thumbnail}}">
-              <span>by: {{song.user.name}}</span>
+        <div ng-if="song" class="container">
+          <div class="col-md-4">
+            <img height="70px" width="70px" class="img-thumbnail" ng-src="{{song.user.thumbnail}}" alt=""><br>
+            <small>{{song.user.name}}</small>
+            <div class="row">
+              <button class="btn btn-sm btn-primary">
+                <span class="glyphicon glyphicon-thumbs-up"></span>
+              </button>
+              <button class="btn btn-sm btn-danger">
+                <span class="glyphicon glyphicon-trash"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="row">
+              {{song.title | limitTo:30 }}
+            </div>
+            <div class="row">
+              <img height="200px" width="300px" ng-src="{{song.thumbnail}}" alt="">
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="" ng-if="song.likes.length">
+              likes: {{song.likes.length}}
+            <!--   <button
+              data-container="body"
+              data-toggle="popover"
+              data-placement="right"
+              data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+              likes...
+            </button> -->
             </div>
           </div>
         </div>

@@ -88,6 +88,10 @@ body {
   padding-right: 10px;
 }
 
+.push-down {
+  padding-top: 45px;
+}
+
 .one-line {
   white-space: nowrap;
 }
