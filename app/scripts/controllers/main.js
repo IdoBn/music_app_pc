@@ -5,7 +5,7 @@ angular.module('musicPcApp')
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
-      'Karma'
+      'Karma',
     ];
 
     Party.getUserParties().success(function(data) {
@@ -21,5 +21,9 @@ angular.module('musicPcApp')
 
     $scope.songSelected = function(song) {
       $scope.song = song;
+    };
+
+    $scope.onDropDelete = function(){
+      alert('DELETE');
     };
   });
