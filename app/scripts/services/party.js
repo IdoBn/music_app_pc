@@ -7,7 +7,7 @@ angular.module('musicPcApp')
     return {
       getUserParties: function() {
         var user = Auth.getUser();
-        return $http.get(URL + '/users/1');
+        return $http.get(URL + '/users/' + user.id);
       },
       getParty: function(partyId) {
         return $http.get(URL + '/parties/' + partyId);

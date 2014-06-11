@@ -54,15 +54,24 @@
 
   <div class="col-md-3 jumbotron">
     <h2>songs</h2>
-    <ul class="list-group scroll">
+    <button class="btn btn-sm btn-danger" ui-on-drop="onDropDelete($data,$event)">
+      <span class="glyphicon glyphicon-trash"></span>
+    </button>
+    <button class="btn btn-sm btn-success">
+      <span class="glyphicon glyphicon-plus"></span>
+    </button>
+    <ul class="scroll list-group">
       <li class="list-group-item"
+          ui-draggable="true"
+          drag="song"
           ng-repeat="song in party.requests"
-          ng-click="songSelected(song)">
-          <a class="pull-left" href="#">
-            <img class="media-object" ng-src="{{song.thumbnail}}" width="80px" height="60px" alt="">
+          ng-click="songSelected(song)"
+          >
+          <a class="pull-left" href="#" drag-handle-class>
+            <img class="media-object" drag-handle-class ng-src="{{song.thumbnail}}" width="80px" height="60px" alt="">
           </a>
-          <small>{{song.title | limitTo:15 }}</small><br>
-          <small ng-if="song.likes">likes: {{song.likes.length}}</small><br>
+          <small drag-handle-class>{{song.title | limitTo:15 }}</small><br>
+          <small drag-handle-class ng-if="song.likes">likes: {{song.likes.length}}</small><br>
       </li>
     </ul>
   </div>

@@ -5,7 +5,8 @@ angular
     'ui.router',
     'openfb',
     'ngCookies',
-    'ui.utils'
+    'ui.utils',
+    'ngDragDrop'
   ])
   .run(function($rootScope, $state, OpenFB, Auth, $cookieStore) {
     OpenFB.init('1417458451820697', 'http://127.0.0.1:9000/oauthcallback.html');
@@ -13,7 +14,7 @@ angular
     $rootScope.$on('$stateChangeStart', function(event, toState, toStateParams) {
       $rootScope.toState = toState;
       $rootScope.toStateParams = toStateParams;
-      
+
       if (toState.name != 'login') {
         if (!Auth.loggedIn()) {
           if ($cookieStore.get('user') != null) {
