@@ -20,9 +20,6 @@
               <button class="btn btn-sm btn-primary">
                 <span class="glyphicon glyphicon-thumbs-up"></span>
               </button>
-              <button class="btn btn-sm btn-danger">
-                <span class="glyphicon glyphicon-trash"></span>
-              </button>
             </div>
           </div>
 
@@ -53,13 +50,17 @@
   </div>
 
   <div class="col-md-3 jumbotron">
-    <h2>songs</h2>
-    <button class="btn btn-sm btn-danger" ui-on-drop="onDropDelete($data,$event)">
+    <ul class="list-inline">
+      <li><small style="color:green" class="glyphicon glyphicon-plus"></small></li>
+      <li><h2>songs</h2></li>
+      <li><small ui-on-drop="onDropDelete($data,$event)" style="color:red" class="glyphicon glyphicon-trash"></small></li>
+    </ul>
+    <!-- <button class="btn btn-sm btn-danger" ui-on-drop="onDropDelete(\$data,\$event)">
       <span class="glyphicon glyphicon-trash"></span>
     </button>
     <button class="btn btn-sm btn-success">
       <span class="glyphicon glyphicon-plus"></span>
-    </button>
+    </button> -->
     <ul class="scroll list-group">
       <li class="list-group-item"
           ui-draggable="true"
