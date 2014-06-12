@@ -6,7 +6,8 @@ angular
     'openfb',
     'ngCookies',
     'ui.utils',
-    'ngDragDrop'
+    'ngDragDrop',
+    'ui.bootstrap'
   ])
   .run(function($rootScope, $state, OpenFB, Auth, $cookieStore) {
     OpenFB.init('1417458451820697', 'http://127.0.0.1:9000/oauthcallback.html');

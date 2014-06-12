@@ -11,6 +11,15 @@ angular.module('musicPcApp')
       },
       getParty: function(partyId) {
         return $http.get(URL + '/parties/' + partyId);
-      }
+      },
+      search: function(id, songpull) {
+        return $http({
+          url: URL + '/parties/' + id + '/search',
+          method: 'GET',
+          params: {
+            songpull: songpull
+          }
+        });
+      },
     }
   });

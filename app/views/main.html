@@ -25,23 +25,16 @@
 
           <div class="col-md-6">
             <div class="row">
-              {{song.title | limitTo:30 }}
+              <img height="130px" width="210px" ng-src="{{song.thumbnail}}" alt="">
             </div>
             <div class="row">
-              <img height="200px" width="300px" ng-src="{{song.thumbnail}}" alt="">
+              {{song.title | limitTo:30 }}
             </div>
           </div>
 
           <div class="col-md-2">
             <div class="" ng-if="song.likes.length">
               likes: {{song.likes.length}}
-            <!--   <button
-              data-container="body"
-              data-toggle="popover"
-              data-placement="right"
-              data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-              likes...
-            </button> -->
             </div>
           </div>
         </div>
@@ -51,7 +44,7 @@
 
   <div class="col-md-3 jumbotron">
     <ul class="list-inline">
-      <li><small style="color:green" class="glyphicon glyphicon-plus"></small></li>
+      <li><small style="color:green" ng-click="open('lg')" class="glyphicon glyphicon-plus"></small></li>
       <li><h2>songs</h2></li>
       <li><small ui-on-drop="onDropDelete($data,$event)" style="color:red" class="glyphicon glyphicon-trash"></small></li>
     </ul>
